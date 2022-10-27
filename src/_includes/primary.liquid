@@ -1,0 +1,76 @@
+---
+title: Aaron G. Miller
+---
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <title>
+      {{title}}
+    </title>
+    <link rel='stylesheet' href='./style.css'>
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+    <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5">
+  </head>
+  <body>
+    <header class="flex flex-col">
+      <div class="flex justify-between">
+        <a href="/">
+          <h1>
+            <span>Aaron G. Miller</span>
+            | Choreographer</h1>
+        </a>
+        <nav class="flex">
+          <button id="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+          </button>
+          <ul class="menu mobile-hidden" id="nav">
+            <li>
+              <a href="#workshops">Workshops</a>
+            </li>
+            <li>
+              <a href="#about">About Me</a>
+            </li>
+            <li>
+              <a href="#news">News</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header-content">
+        <div></div>
+        <div class="header-booking">
+          <h2>I believe you can dance.</h2>
+          <a href="#" class="button text-white">Book Workshop</a>
+        </div>
+      </div>
+    </header>
+
+    {{content}}
+
+
+    <footer class="mt-sm">
+      <div class="p-15">
+        <div class="footer-text">
+          <h4 class="text-white">Thank you for your interest in Art!</h4>
+          <p class="text-white mb-sm">© 2004 – 2023 Aaron G. Miller</p>
+        </div>
+        <a href="#" class="primary">Imprint & Privacy</a>
+      </div>
+      {{year}}
+    </footer>
+    <script src='./main.js'></script>
+    <script>/* document.addEventListener("DOMContentLoaded", function(event) {
+    MainNav.init();
+    }); */
+  </script>
+</body></html>
