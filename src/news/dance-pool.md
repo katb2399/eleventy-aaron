@@ -12,7 +12,7 @@ srcset: "/images/DANCE_-_Grupe_ddlshp_c_scale,w_200.jpg 200w,
       /images/DANCE_-_Grupe_ddlshp_c_scale,w_1301.jpg 1301w,
       /images/DANCE_-_Grupe_ddlshp_c_scale,w_1400.jpg 1400w"
 src: '/images/DANCE_-_Grupe_ddlshp_c_scale,w_1400.jpg'
-alt: Group picture of 'Dance Pool
+alt: Group picture of Dance Pool
 ---
 
 Elementum curabitur vitae nunc sed velit dignissim. Faucibus purus in massa tempor nec feugiat nisl pretium. Auctor elit sed vulputate mi sit. Faucibus a pellentesque sit amet porttitor eget. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Congue mauris rhoncus aenean vel elit scelerisque mauris. Pellentesque diam volutpat commodo sed egestas. Amet dictum sit amet justo donec enim diam. Mattis vulputate enim nulla aliquet porttitor lacus. Faucibus vitae aliquet nec ullamcorper sit amet risus. Fermentum et sollicitudin ac orci.
