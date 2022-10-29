@@ -3,7 +3,7 @@
 }
 html {
   font-family: "Source Sans Pro", sans-serif;
-  min-width: none;
+  min-width: unset;
 }
 
 h2, h3 {
@@ -111,7 +111,7 @@ img {
 }
 .shown {
   display: flex;
-  translate: 0%;
+  transform: translate(0%);
 }
 
 .flex-col {
