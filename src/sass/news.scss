@@ -12,15 +12,21 @@
             }
         }
     }
+    .articles.news-wrapper {
+        padding: 2em $mobile-padding;
+    }
 }
 
 @include breakpoint($desktop) {
-    article {
-        img {
-            max-width: 100%;
-            max-height: 240px;
-        }
-    }
+    #news {
+        article {
+            background-color: $muddy-white;
+            img {
+                max-width: 100%;
+                max-height: 240px;
+            }
+      }
+   }
     .articles {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -28,6 +34,9 @@
     }
     section#news {
         padding: 3em $desktop-padding 6em $desktop-padding;
+        .mb-xl {
+            margin-bottom: 35px;
+        }
         div.img-crop {
             overflow-y: hidden;
             max-height: 340px;
@@ -52,6 +61,21 @@
             text-overflow: ellipsis;
             white-space: nowrap;
             overflow: hidden;
+        }
+    }
+    .articles.news-wrapper {
+        padding: 2em $desktop-padding;
+        article {
+            display: flex;
+            gap: 1em;
+            div.p-15 {
+                width: 100%;
+            }
+        }
+        img {
+            object-fit: cover;
+            height: 100%;
+            max-height: unset;
         }
     }
 }

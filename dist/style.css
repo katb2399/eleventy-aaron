@@ -126,6 +126,10 @@ p {
   color: hsl(26deg, 63%, 57%);
 }
 
+article h3.p-15 a {
+  color: hsl(26deg, 63%, 57%);
+}
+
 .p-15 {
   padding: 18px;
 }
@@ -147,7 +151,7 @@ p {
 }
 
 .mb-xl {
-  margin-bottom: 70px;
+  margin-bottom: 65px;
 }
 
 .mb-sm {
@@ -231,6 +235,31 @@ img {
   font-size: 1em;
   font-weight: 600;
   color: hsl(0deg, 0%, 21%);
+}
+
+.articles.news-wrapper {
+  display: block;
+  margin: 0 auto;
+}
+.articles.news-wrapper > article {
+  background-color: hsl(0deg, 0%, 97%);
+}
+.articles.news-wrapper > article div.p-15 p {
+  margin-bottom: 1em;
+  color: hsl(0deg, 0%, 0%);
+  font-weight: 300;
+  line-height: 1.5em;
+}
+.articles.news-wrapper > p {
+  margin-bottom: 1em;
+}
+.articles.news-wrapper > p i {
+  color: hsl(0deg, 0%, 0%);
+  font-weight: 300;
+}
+.articles.news-wrapper img {
+  max-width: unset;
+  max-height: unset;
 }
 
 @media (min-width: 72.5rem) {
@@ -677,9 +706,15 @@ div.articles > article {
     color: hsl(0deg, 0%, 21%);
     margin-bottom: 20px;
   }
+  .articles.news-wrapper {
+    padding: 2em 5px;
+  }
 }
 @media (min-width: 72.5rem) {
-  article img {
+  #news article {
+    background-color: hsl(0deg, 0%, 97%);
+  }
+  #news article img {
     max-width: 100%;
     max-height: 240px;
   }
@@ -690,6 +725,9 @@ div.articles > article {
   }
   section#news {
     padding: 3em 36px 6em 36px;
+  }
+  section#news .mb-xl {
+    margin-bottom: 35px;
   }
   section#news div.img-crop {
     overflow-y: hidden;
@@ -715,6 +753,21 @@ div.articles > article {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+  }
+  .articles.news-wrapper {
+    padding: 2em 36px;
+  }
+  .articles.news-wrapper article {
+    display: flex;
+    gap: 1em;
+  }
+  .articles.news-wrapper article div.p-15 {
+    width: 100%;
+  }
+  .articles.news-wrapper img {
+    object-fit: cover;
+    height: 100%;
+    max-height: unset;
   }
 }
 @media (min-width: 0rem) and (max-width: 72.4375rem) {

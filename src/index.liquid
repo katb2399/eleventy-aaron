@@ -86,11 +86,11 @@ TODO: – Add title
     <div>
       <div class="img-crop">
         <img sizes="(max-width: 1400px) 100vw, 1400px" srcset="
-                                                                              ./images/Cheng_Tsung_Lung_e5m8tr_c_scale,w_200.jpg 200w,
-                                                                              ./images/Cheng_Tsung_Lung_e5m8tr_c_scale,w_705.jpg 705w,
-                                                                              ./images/Cheng_Tsung_Lung_e5m8tr_c_scale,w_1047.jpg 1047w,
-                                                                              ./images/Cheng_Tsung_Lung_e5m8tr_c_scale,w_1276.jpg 1276w,
-                                                                              ./images/Cheng_Tsung_Lung_e5m8tr_c_scale,w_1400.jpg 1400w" src="./images/Cheng_Tsung_Lung_e5m8tr_c_scale,w_1400.jpg" alt="A portret of Aaron">
+                                                                                                                                                    ./images/Cheng_Tsung_Lung_e5m8tr_c_scale,w_200.jpg 200w,
+                                                                                                                                                    ./images/Cheng_Tsung_Lung_e5m8tr_c_scale,w_705.jpg 705w,
+                                                                                                                                                    ./images/Cheng_Tsung_Lung_e5m8tr_c_scale,w_1047.jpg 1047w,
+                                                                                                                                                    ./images/Cheng_Tsung_Lung_e5m8tr_c_scale,w_1276.jpg 1276w,
+                                                                                                                                                    ./images/Cheng_Tsung_Lung_e5m8tr_c_scale,w_1400.jpg 1400w" src="./images/Cheng_Tsung_Lung_e5m8tr_c_scale,w_1400.jpg" alt="A portret of Aaron">
       </div>
       <div class="p-15">
         <p class="super-headline">Why I teach</p>
@@ -103,103 +103,26 @@ TODO: – Add title
   </section>
   <section id="news">
     <p class="super-headline">Making waves since 2004</p>
-    <h2 class="section-heading mb-xl">News</h2>
-    {% assign news = collections.news | reverse %}
-    {% for n in news limit:3 %}
-      <article>
-        <h3>
-          <a href='{{ n.url }}'>{{ n.data.title }}</a>
-          –
-        </h3>
-        <p>{{ n.data.excerpt }}</p>
-      </article>
-    {% endfor %}
+    <h2 class="section-heading mb-xl">In the News</h2>
+    <div class="articles">
+      {% assign news = collections.news | reverse %}
 
-    {%- comment -%}
-      <h2 class="section-heading mb-sm">In the News</h2>
-      <div class="articles">
-      <article>
-      <h3 class="p-15">Sydney Dance Festival 2022</h3>
-      <div class="img-crop">
-      <img
-      sizes="(max-width: 1400px) 100vw, 1400px"
-      srcset="
-      ./images/Aaron_dance_vu0sce_c_scale,w_200.jpg 200w,
-      ./images/Aaron_dance_vu0sce_c_scale,w_644.jpg 644w,e
-      ./images/Aaron_dance_vu0sce_c_scale,w_975.jpg 975w,
-      ./images/Aaron_dance_vu0sce_c_scale,w_1133.jpg 1133w,
-      ./images/Aaron_dance_vu0sce_c_scale,w_1298.jpg 1298w,
-      ./images/Aaron_dance_vu0sce_c_scale,w_1397.jpg 1397w,
-      ./images/Aaron_dance_vu0sce_c_scale,w_1400.jpg 1400w"
-      src="./images/Aaron_dance_vu0sce_c_scale,w_1400.jpg"
-      alt="Aaron performing at the Sydney dance festival 2022">
-      </div>
-      <div class="p-15">
-      <p>
-      Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-      sed diam nonumy eirmod tempor invidunt ut labore et
-      dolore magna aliquyam erat, sed diam voluptua. At vero
-      eos et accusam et justo duo dolores et ea rebum. Stet
-      clita kasd gubergren, no sea takimata sanctus est.
-      </p>
-      <a href="#" class="button text-black">Read more</a>
-      </div>
-      </article>
+      {% for n in news limit:3 %}
 
-      <article>
-      <h3 class="p-15">"Dance Pool" 2023 sold out!</h3>
-      <div class="img-crop">
-      <img
-      sizes="(max-width: 1400px) 100vw, 1400px"
-      srcset="
-      ./images/DANCE_-_Grupe_ddlshp_c_scale,w_200.jpg 200w,
-      ./images/DANCE_-_Grupe_ddlshp_c_scale,w_597.jpg 597w,
-      ./images/DANCE_-_Grupe_ddlshp_c_scale,w_846.jpg 846w,
-      ./images/DANCE_-_Grupe_ddlshp_c_scale,w_1082.jpg 1082w,
-      ./images/DANCE_-_Grupe_ddlshp_c_scale,w_1301.jpg 1301w,
-      ./images/DANCE_-_Grupe_ddlshp_c_scale,w_1400.jpg 1400w"
-      src="./images/DANCE_-_Grupe_ddlshp_c_scale,w_1400.jpg"
-      alt="Group picture of 'Dance Pool">
-      </div>
-      <div class="p-15">
-      <p>
-      Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-      sed diam nonumy eirmod tempor invidunt ut labore et
-      dolore magna aliquyam erat, sed diam voluptua. At vero
-      eos et accusam et justo duo dolores et ea rebum. Stet
-      clita kasd gubergren, no sea takimata sanctus est.
-      </p>
-      <a href="#" class="button text-black">Read more</a>
-      </div>
-      </article>
+        <article>
+          <h3 class="p-15">
+            <a href='{{ n.url }}'>{{ n.data.title }}</a>
+          </h3>
+          <div class="img-crop">
+            <img sizes='{{ n.data.sizes }}' srcset=' {{ n.data.srcset }}' src='{{ n.data.src }}' alt='{{ n.data.alt }}'>
+          </div>
+          <div class="p-15">
+            <p>{{ n.data.excerpt }}</p>
+            <a href='{{ n.url }}' class="button text-black">Read more</a>
+          </div>
+        </article>
 
-      <article>
-      <h3 class="p-15">New London Workshop Oct. 2025</h3>
-      <div class="img-crop">
-      <img
-      sizes="(max-width: 1400px) 100vw, 1400px"
-      srcset="
-      ./images/Aaron_pitsch_lj8gid_c_scale,w_200.jpg 200w,
-      ./images/Aaron_pitsch_lj8gid_c_scale,w_622.jpg 622w,
-      ./images/Aaron_pitsch_lj8gid_c_scale,w_933.jpg 933w,
-      ./images/Aaron_pitsch_lj8gid_c_scale,w_1152.jpg 1152w,
-      ./images/Aaron_pitsch_lj8gid_c_scale,w_1285.jpg 1285w,
-      ./images/Aaron_pitsch_lj8gid_c_scale,w_1397.jpg 1397w,
-      ./images/Aaron_pitsch_lj8gid_c_scale,w_1400.jpg 1400w"
-      src="./images/Aaron_pitsch_lj8gid_c_scale,w_1400.jpg"
-      alt="Aaron at a workshop">
-      </div>
-      <div class="p-15">
-      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-      sed diam nonumy eirmod tempor invidunt ut labore et
-      dolore magna aliquyam erat, sed diam voluptua. At vero
-      eos et accusam et justo duo dolores et ea rebum. Stet
-      clita kasd gubergren, no sea takimata sanctus est.
-      </p>
-      <a href="#" class="button text-black">Read more</a>
-      </div>
-      </article>
-      </div>
-    {%- endcomment -%}
+      {% endfor %}
+    </div>
   </section>
 </main>

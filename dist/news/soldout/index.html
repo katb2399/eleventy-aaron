@@ -1,6 +1,3 @@
----
-title: Aaron G. Miller
----
 
 
 <!DOCTYPE html>
@@ -11,9 +8,9 @@ title: Aaron G. Miller
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <title>
-      {{title}}
+      Sold out
     </title>
-    <link rel='stylesheet' href='/style.css'>
+    <link rel='stylesheet' href='./style.css'>
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
@@ -55,24 +52,24 @@ title: Aaron G. Miller
       </div>
     </header>
 
-    {{content}}
+    <p>I'm super excited to announce that...</p>
+
 
 
     <footer class="mt-sm">
       <div class="p-15">
         <div class="footer-text">
           <h4 class="text-white">Thank you for your interest in Art!</h4>
-          <p class="text-white mb-sm">© 2004 – {{year}} Aaron G. Miller</p>
+          <p class="text-white mb-sm">© 2004 –  Aaron G. Miller</p>
         </div>
         <a href="#" class="primary">Imprint & Privacy</a>
       </div>
     </footer>
     <script src='./main.js'></script>
     <script>
-      {%- comment -%}
-        document.addEventListener("DOMContentLoaded", function(event) {
-          MainNav.init();
-        });{%- endcomment -%}
+      document.addEventListener("DOMContentLoaded", function(event) {
+        MainNav.init();
+      });
     </script>
   </body>
 </html>

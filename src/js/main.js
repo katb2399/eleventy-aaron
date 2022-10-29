@@ -1,5 +1,5 @@
-/* import * as MainNav from './lib/mainnav.js';
-window.MainNav = MainNav; */
+// import * as MainNav from './lib/mainnav.js';
+// window.MainNav = MainNav;
 
 const button = document.querySelector('#hamburger');
 const nav = document.querySelector('#nav');

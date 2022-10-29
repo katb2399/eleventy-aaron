@@ -28,6 +28,10 @@ p {
 .primary {
   color: $primary;
 }
+article {
+  h3.p-15 a {
+    color: $primary;
+}}
 .p-15 {
   padding: 18px;
 }
@@ -49,7 +53,7 @@ p {
 }
 
 .mb-xl {
-  margin-bottom: 70px;
+  margin-bottom: 65px;
 }
 
 .mb-sm {
@@ -133,6 +137,33 @@ img {
   font-size: 1em;
   font-weight: 600;
   color: $dark-gray;
+}
+
+.articles.news-wrapper {
+  display: block;
+  margin: 0 auto;
+  > article {
+    background-color: $muddy-white;
+      div.p-15 {
+        p {
+          margin-bottom: 1em;
+          color: $black;
+          font-weight: 300;
+          line-height: 1.5em;
+        }
+      }
+  }
+  > p {
+    margin-bottom: 1em;
+    i {
+      color: $black;
+      font-weight: 300;
+    }
+  }
+  img {
+    max-width: unset;
+    max-height: unset;
+  }
 }
 @include breakpoint($desktop) {
   .button {

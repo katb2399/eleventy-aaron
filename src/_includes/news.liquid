@@ -1,0 +1,19 @@
+---
+layout: primary
+---
+<main>
+  <div class="articles news-wrapper">
+    <h2 class="section-heading mb-sm">{{ title }}</h2>
+    <p>
+      <i>Written: {{ date | date: "%b %d, %Y"}}</i>
+    </p>
+    <article>
+      <div class="img-crop">
+        <img sizes='{{ sizes }}' srcset=' {{ srcset }}' src='{{ src }}' alt='{{ alt }}'>
+      </div>
+      <div class="p-15">
+        {{ content }}
+      </div>
+    </article>
+  </div>
+</main>
